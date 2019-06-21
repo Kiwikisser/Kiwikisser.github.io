@@ -1,2 +1,2 @@
 # kiwikisser.github.io
-End project website of first year IT edu.
+Basic website for end project of first year IT edu.
