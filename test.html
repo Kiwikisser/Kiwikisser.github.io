@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html lang="nl">
+    <head>
+        <title>IIPMEDT &mdash; Home</title>
+        <link rel="stylesheet" type="text/css" href="css/styles.css"/>
+        <link href='https://fonts.googleapis.com/css?family=Alef' rel='stylesheet'>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<meta charset="utf-8">
+    </head>
+    
+    <body>
+        <div class="banner">
+            <h1>IIPMEDT</h1>
+        </div>
+        
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li id="empathize" ><a href="empathize.html">Empathize</a></li>
+                <li id="define"><a href="define.html">Define</a></li>
+                <li id="ideate"><a href="ideate.html">Ideate</a></li>
+                <li id="prototype"><a href="prototype.html">Prototype</a></li>
+                <li id="test"><a class="active" href="test.html">Test</a></li>
+                <li><a href="nawoord.html">Nawoord</a></li>
+            </ul>
+        </nav>
+        
+        <main>
+            <article class="wallOfText">
+                <div>
+                    <h2>Test</h2>
+                    <p>De usability voelde goed en <span style="text-decoration: line-through;">bijna</span> alle hardware was binnen, dus werd het tijd om een functioneel prototype te bouwen. Alle hard- en software skills kwamen goed van pas, tijd om te knallen en nog meer met de handen te werken. Het eindresultaat voor het eerste prototype zat in twee aan mekaar getapete dozen en een aantal componenten waarvan een aantal helaas nog niet beschikbaar of aanwezig waren om te gebruiken, toch hebben de coaches onze installatie mogen testen. Eigenlijk is het principe opnieuw usability testen, wat je overigens nooit te vaak kan doen, en wederom feedback opnemen en verwerken. Maar deze keer, met hardware i.p.v. papier, hebben de gebruikers een beter idee gekregen hoe onze installatie te werk gaat door het prototype te testen, niet te vergeten dat het ervaren IAT coaches zijn i.p.v. <span style="text-decoration: line-through;">proefkonijnen</span> medestudenten.</p>
+                    <figure class="white_board_n">
+                        <img src="media/whiteboard_installatie.jpeg" alt=""/>
+                        <figcaption>Ik stelde een keer voor om stiften mee te nemen zodat we gezamenlijk konden brainstormen op een whiteboard, na de sessie hadden we allemaal een redelijk beeld over wat we precies wilden doen.</figcaption>
+                    </figure>
+                    <p>In grote lijnen onze installatie:</p>
+                    <p>Om te starten haalt de gebruiker een handle over alsof deze een arcade/casino machine activeert. Er zijn 16 goden op &eacute;&eacute;n paneel en 16 titels/occupaties van de goden op het andere paneel, van de goden wordt er willekeurig eentje uitgekozen waarbij de gebruiker de juiste titel aan moet matchen (bijvoorbeeld: Anubis &ndash; god van de dood), het matchen wordt uitgevoerd met een joystick en grote select knop. Dit herhaalt zich vijf keer, waarbij er bij een goed of fout antwoord een bijbehorend piramidetje groen of rood op licht aan de boven zijde van de installatie.</p>
+                    <figure class="first_prototype">
+                        <img src="media/first_prototype.png" alt=""/>
+                        <figcaption>Druk bezig om ons eerste prototype in mekaar te zetten voor het testen.</figcaption>
+                    </figure>
+                    <p>De feedback was erg nuttig, want zonder hadden we een grote kans op onvoldoende. Onze installatie voelde karig aan, we hadden namelijk een cruciaal onderdeel van de installatie over het hoofd gezien: het gevoel van spanning of interesse wat de aandacht van de gebruiker behoudt. Als voorbeeld gaf onze coach een timer toe te voegen wat dan voldoende zou zijn. Wij vonden het een goed idee, maar ook zo saai om alleen dat idee toe te passen, voornamelijk omdat het niet eens ons idee was.</p>
+                    <p>Uiteindelijk hebben we dit aan onze installatie toegevoegd:<br /> De gebruiker heeft &plusmn;15 seconden om te raden, waarbij een goed antwoord 5 punten op levert en de resterende tijd daar nog bij opgeteld wordt en aan de bovenzijde weergegeven word. De tijd zal als een analoog klokje weergegeven worden naast de joystick.</p>
+                    <p>Het proces voor het ontwikkelen en toevoegen van de nieuwe features werkten we allemaal parallel, mag ook wel als het enige groepje van vijf man. <br /> Ik heb op verschillende gebieden bijdrage geleverd aan het ontwikkelen en bouwen van de installatie:</p>
+                    <p>Bas en Marc hadden het concept er van gemaakt met 3 LEDs zonder shiftregisters, ik zette uit om het te laten werken met 16 RGB LEDs en vier shiftregisters die nog individueel van kleur veranderd konden worden. Het implementeren van de hoeveelheid RGB LEDs was redelijk makkelijk te doen, echter kon merkte ik achteraf op dat deze manier het niet mogelijk maakte om LEDs consistent &eacute;&eacute;n kleur te tonen gedurende de start sequence. <br /> Na veel kleine test installaties realiseerde ik dat het te moeilijk was met slechts software, maar op de details ga ik niet in. Over de oplossing heb ik inmiddels al veel gebrainstormd en bedacht een paar aanpassingen in hoe de hardware ingedeeld is waardoor het wel mogelijk werd, maar aangezien we als groep besloten het minder prioriteit te geven vergeleken met andere milestones in ons project, zagen we het als een mogelijk extraatje.</p>
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/-Ojkj7npEUU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                    
+                    <p>Toen we nog te weinig LEDs hadden om te testen ging ik maar alvast software concepten. De code voor de selectie had ik vrij snel compleet, voor zo ver dat kon, d.m.v. nested Arrays. Uiteindelijk zijn Bas en Stephan hier mee verder gegaan door de LEDs te laten reageren op de Joystick en Select knop.</p>
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/pxSN5kKHHGE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <p>De puntentelling heb ik ook ontworpen, daarbij heb ik gebruik gemaakt van twee seven-segment displays en twee aan mekaar gelinkte shiftregisters. De software omvatte slechts &eacute;&eacute;n Array, twee for-loops, en een beetje logica. Ik veraste mezelf met hoe beknopt ik de code kon laten zijn.</p>
+                    <p>De techniek achter de handle om de puzzel te starten heb ik ook bedacht, met een deurklink nota bene. Al sinds het idee in de groep was gegooid (week 2) en iedereen het goed vond begon ik dag in dag uit onbewust te brainstormen hoe de handle stevig vast gemaakt kon worden, en op welke manier een event ontstaat door feedback van de user. Opeens (week 7) kwam er een deurklink in me op en gooide meteen het idee in de groep, het voelde goed toen ze synchroon mij aankeken alsof ik zojuist met het beste idee van Nederland was gekomen. De handle is nu dus ook een verlengde deurklink die van binnen tegen een knop drukt bij het roteren.</p>
+                    <figure class="arduino_folder">
+                        <img src="media/arduino_folders.PNG" alt=""/>
+                        <figcaption>Alle Arduino libraries die ik aangemaakt had gedurende het project, ik heb uiteindelijk veel ge-concept en getest.</figcaption>
+                    </figure>
+                    <p>Gedurende het afwerken van de installatie zorgde ik voor zoveel mogelijk materiaal en gereedschap zolang dat binnen mijn macht lag, hielp Bas en Stephan bij het afmeten en in mekaar zetten van de behuizing en hardware, en ondersteunde ik Mauriccio met debuggen toen we alle hard- en software voor het eerst als &eacute;&eacute;n geheel testten.</p>
+                    <p class="gib_margin">Ten slotte wil ik mijn eigen belangrijkste hulpmiddel toelichten: de al eerder genoemde kleine testinstallaties. Omdat ik al wat hardware bezat voorafgaand aan het project, bouwde ik met wat over bleef een soort testomgeving om zelf nieuwe software te ontwikkelen terwijl mijn teamgenootjes al druk bezig waren met het afwerken van bestaande onderdelen etc.</p>
+                </div>
+            </article>
+        </main>
+    </body>
+    
+</html>
